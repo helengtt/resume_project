@@ -1,5 +1,6 @@
-$("body").css("display", "none");
+
 $(document).ready(function(){
+    $("#profile").css("display", "none");
 	console.log("document is ready");
-	$("body").fadeIn(1000);
-})
+	$("#profile").fadeIn(1000);
+});
