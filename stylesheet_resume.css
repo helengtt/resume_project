@@ -1,0 +1,187 @@
+@charset "utf-8";
+
+header, footer, section, nav, article{  
+    display: block;  
+}
+
+BODY {
+	font-family: 'Open Sans', sans-serif;
+	background-color: #ffffcc;
+	margin:0;
+	padding:0;
+	/* reset the default styles */
+}
+
+	h1, h2, h3, .headerli {
+		color:#339966;
+		font-weight:normal;
+	}
+	div h1, h2{
+		text-align: center;
+	}
+	.bg-white{
+		background-color: #ffffff;
+	}
+
+/*back to top button*/
+	#myBtn {
+	  display: none;
+	  position: fixed;
+	  bottom: 120px;
+	  right: 70px;
+	  z-index: 100;
+	  border: none;
+	  outline: none;
+	  padding: 0;
+      margin: 0;
+	  cursor: pointer;
+	  border-radius: 20%;
+	}
+
+/* Header */
+	#header {
+		background-color: #ffffcc;
+		box-shadow: 0 5px 5px #d9d9d9;
+	}	
+	.headerli{
+		font-size: 16px; 
+		padding: 0px 30px;
+	}		
+	.headerli:hover {
+		color: #d9d9d9;
+		text-decoration: none;
+	}
+
+/*background setup. All execpt Header*/
+	#wrapper{
+		position: relative;
+	}
+	#profile, #skills, #education, #experience, #volunteer, #contact, FOOTER div {
+		margin: auto 16%;
+		padding: 80px 2% 20px 2%;
+	}
+
+/* Profile */
+	#background-profile{
+		background: url("images/backgroundPhoto.jpg") no-repeat center center fixed;
+		-webkit-background-size: 100%; 
+    	-moz-background-size: 100%; 
+    	-o-background-size: 100%; 
+    	background-size: 100%;
+    	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/backgroundPhoto.jpg', sizingMethod='scale')";
+	    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/backgroundPhoto.jpg', sizingMethod='scale');
+	}
+	#profile {
+		padding-top: 150px;
+		position:relative;
+		background-color: #ffffff;
+		z-index: 2;
+	}
+	.overlay{
+		position: absolute;
+		height: 13%;
+		background: #ffffff;
+		top: 0px;
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+		/* Add Opacity */
+		/* IE 8 */
+		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+		/* IE 5-7 */
+		filter: alpha(opacity=50);
+		/* Netscape /Mozilla */
+		-moz-opacity:0.5;
+		/* Safari 1.x */
+		-khtml-opacity:0.5;
+		/* Good browsers */
+		opacity:0.5;
+		z-index: 1;
+	}
+	#profile img{
+		border-radius: 20%;
+		margin-left: 20%;
+	}
+	#profile h1{
+		margin-bottom: 50px;
+	}
+
+/* Skills*/
+	ul.no-bullets {
+	    list-style: none;
+	    margin-left: 0px;
+	    padding-left: 1em;
+	    text-indent: -1em;
+	}
+	.listsymbol:before{
+		content:"-";
+	}
+
+/*Experience*/
+	.font1 {
+		font-size:13px;
+		color:gray;
+	}
+	.font2{
+		font-size: 13px;
+	}
+	.float{
+		float:right;
+		color:#339966;
+		text-decoration: none;
+	}
+	.float img {
+		height: 16px;
+		padding-right: 5px;
+	}
+	.weblink {
+		color:#339966;
+		text-decoration: none;
+		}		
+	.weblink:hover {
+		color: #d9d9d9;
+	}
+	.linkicon {
+		height: 16px;
+		padding-left: 5px;
+	}
+
+/*Contact*/
+	.btnSend{
+		font-size: 16px;
+		color:#ffffff;
+		width: 100%;
+		background-color:#434242;
+	}
+	img.left{
+		margin-right: 5%;
+	}
+	#contact{
+		padding-bottom: 100px;
+	}
+	.form-row{
+		margin-bottom: 15px;
+	}
+
+/*Footer*/
+	.background-gray{
+		background-color: #434242;
+		color:#ffffff;
+	}
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
