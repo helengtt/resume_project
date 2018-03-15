@@ -7,68 +7,90 @@ $(document).ready(function() {
 
 		function validateName() {
 			var name = document.getElementById('txtName').value;
-			if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)){
-				producePrompt('First and last name, please.','name-error', 'red');
+
+			if(name.length == 0) {
+			    document.getElementById("name-error").innerHTML = "Name needed please.";
+			    return false;
+			}
+
+			if (!name.match(/^[A-Za-z]+$/)){
+				document.getElementById("name-error").innerHTML ="Your name please.";
 	    		return false;
 			}
 
-			producePrompt('Valid', 'name-error', 'green');
+			document.getElementById("name-error").innerHTML ="Valid";
 			return true;	
 		}
 
 		function validatePhone() {
 			var phone = document.getElementById('txtPhone').value;
-			if(phone.length != 10) {
-				producePrompt('Include area code.', 'phone-error', 'red');
-	      		return false;
-			}
 
-			if(!phone.match(/^[0-9]{10}$/)) {
-		      producePrompt('Only digits, please.' ,'phone-error', 'red');
-		      return false;
+			// if(phone.length == 0) {
+		 //    	document.getElementById("phone-error").innerHTML = "Phone number is required.";
+		 //    	return false;
+		 //    }
+
+			if(phone.length != 10 || !phone.match(/^[0-9]{10}$/)) {
+		    	document.getElementById("phone-error").innerHTML = "10 digits please.";
+		    	return false;
 	    	}
 
-	    	producePrompt('Valid', 'phone-error', 'green');
+	    	document.getElementById("phone-error").innerHTML = "Valid";
 		    return true;
 	    }
 
 	    function validateMobile() {
-			var mobile = document.getElementById('txtEmail').value;
-			if(mobile.length != 10) {
-				producePrompt('Include area code.', 'mobile-error', 'red');
-	      		return false;
-			}
+			var mobile = document.getElementById('txtMobile').value;
 
-			if(!mobile.match(/^[0-9]{10}$/)) {
-		      producePrompt('Only digits, please.' ,'mobile-error', 'red');
-		      return false;
+			// if(mobile.length == 0) {
+		 //    	document.getElementById("mobile-error").innerHTML = "Phone number is required.";
+		 //    	return false;
+		 //    }
+
+
+			if(mobile.length != 10 || !mobile.match(/^[0-9]{10}$/)) {
+	      		document.getElementById("mobile-error").innerHTML = "10 digits please.";
+	      		return false;
 	    	}
 
-	    	producePrompt('Valid', 'mobile-error', 'green');
+	    	document.getElementById("mobile-error").innerHTML ="Valid";
 		    return true;
 	    }
 
 	    function validateEmail () {
-	  		var email = document.getElementById('contact-email').value;
+	  		var email = document.getElementById('txtEmail').value;
+
+	  		if(email.length == 0) {
+			    document.getElementById("email-error").innerHTML = "Email Invalid";
+			    return false;
+			}
+
 	  		if(!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
-	    		producePrompt('Email Invalid', 'email-error', 'red');
+	    		document.getElementById("email-error").innerHTML = "Email Invalid";
 	    		return false;
 	  		}
 
-	  		producePrompt('Valid', 'email-error', 'green');
+	  		document.getElementById("email-error").innerHTML = "Valid";
 	  		return true;
 		}
 
 
 	    function validateMessage() {
 		  	var message = document.getElementById('txtMessage').value;
+		  	
+		  	if(message.length == 0) {
+			    document.getElementById("message-error").innerHTML = "Message is required.";
+			    return false;
+			}
 
-			if (message.length < 10) {
-				producePrompt(message.length + ' more characters required','message-error','red');
+			var required = 10;
+			var left = required - message.length;
+			if (left >0) {
+				document.getElementById("message-error").innerHTML = left + " more characters please.";
 				return false;
 			}
 
-		  	producePrompt('Valid', 'message-error', 'green');
+		  	document.getElementById("message-error").innerHTML = "Valid";
 		  	return true;
 
 		}
@@ -76,8 +98,10 @@ $(document).ready(function() {
 		function validateForm() {
 			 if (!validateName() || !validatePhone() || !validateMobile() || !validateEmail() || !validateMessage()) {
 			    jsShow('submit-error');
-			    producePrompt('Oops! Error happens. The correct information will guarantee my instant reply.', 'submit-error', 'red');
-			    setTimeout(function(){jsHide('submit-error');}, 2000);
+			    document.getElementById("submit-error").innerHTML = "Oops! Error happens. The correct information will guarantee my instant reply.";
+			    return false;
+			 }else{
+			 	return true;	
 			 }
 		}
 
@@ -85,9 +109,7 @@ $(document).ready(function() {
 		  document.getElementById(id).style.display = 'block';
 		}
 
-		function jsHide(id) {
-		  document.getElementById(id).style.display = 'none';
-		}
+		return validateForm();
 
 	})
 
