@@ -25,36 +25,37 @@ $(document).ready(function() {
 		function validatePhone() {
 			var phone = document.getElementById('txtPhone').value;
 
-			// if(phone.length == 0) {
-		 //    	document.getElementById("phone-error").innerHTML = "Phone number is required.";
-		 //    	return false;
-		 //    }
+			if(phone.length == 0) {
+		    	document.getElementById("phone-error").innerHTML = "";
+		    	return true;
+		    }
 
-			if(phone.length != 10 || !phone.match(/^[0-9]{10}$/)) {
-		    	document.getElementById("phone-error").innerHTML = "10 digits please.";
-		    	return false;
+			if(phone.length == 10 && phone.match(/^[0-9]{10}$/)) {
+		    	document.getElementById("phone-error").innerHTML = "Valid";
+		    	return true;
 	    	}
 
-	    	document.getElementById("phone-error").innerHTML = "Valid";
-		    return true;
+	    	document.getElementById("phone-error").innerHTML = "10 digits please.";
+		    return false;
+	    	
 	    }
 
 	    function validateMobile() {
 			var mobile = document.getElementById('txtMobile').value;
 
-			// if(mobile.length == 0) {
-		 //    	document.getElementById("mobile-error").innerHTML = "Phone number is required.";
-		 //    	return false;
-		 //    }
+			if(mobile.length == 0) {
+		    	document.getElementById("mobile-error").innerHTML = "";
+		    	return true;
+		    }
 
 
-			if(mobile.length != 10 || !mobile.match(/^[0-9]{10}$/)) {
-	      		document.getElementById("mobile-error").innerHTML = "10 digits please.";
-	      		return false;
+			if(mobile.length == 10 && mobile.match(/^[0-9]{10}$/)) {
+	      		document.getElementById("mobile-error").innerHTML = "Valid";
+	      		return true;
 	    	}
 
-	    	document.getElementById("mobile-error").innerHTML ="Valid";
-		    return true;
+	    	document.getElementById("mobile-error").innerHTML ="10 digits please.";
+		    return false;
 	    }
 
 	    function validateEmail () {
