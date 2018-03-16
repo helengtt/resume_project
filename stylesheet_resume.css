@@ -56,8 +56,13 @@ BODY {
 	#wrapper{
 		position: relative;
 	}
-	#profile, #skills, #education, #experience, #volunteer, #contact, FOOTER div {
+	.container {
 		padding: 80px 2% 20px 2%;
+	}
+
+	@media (min-width: 1200px)
+	.container{
+	    max-width: 960px;
 	}
 
 /* Profile */
@@ -74,29 +79,8 @@ BODY {
 		padding-top: 150px;
 		position:relative;
 		background-color: #ffffff;
-		z-index: 2;
 	}
-	.overlay{
-		position: absolute;
-		height: 13%;
-		background: #ffffff;
-		top: 0px;
-		bottom: 0px;
-		left: 0px;
-		right: 0px;
-		/* Add Opacity */
-		/* IE 8 */
-		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-		/* IE 5-7 */
-		filter: alpha(opacity=50);
-		/* Netscape /Mozilla */
-		-moz-opacity:0.5;
-		/* Safari 1.x */
-		-khtml-opacity:0.5;
-		/* Good browsers */
-		opacity:0.5;
-		z-index: 1;
-	}
+	
 	#profile img{
 		border-radius: 20%;
 		margin-left: 20%;
