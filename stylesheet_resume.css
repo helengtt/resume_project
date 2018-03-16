@@ -13,7 +13,7 @@ BODY {
 }
 
 	h1, h2, h3, .headerli {
-		color:#339966;
+		color:#25936D;
 		font-weight:normal;
 	}
 	div h1, h2{
@@ -57,7 +57,7 @@ BODY {
 		position: relative;
 	}
 	.container {
-		padding: 80px 2% 20px 2%;
+		padding: 100px 2% 30px 2%;
 	}
 
 	@media (min-width: 1200px)
@@ -99,6 +99,14 @@ BODY {
 	.listsymbol:before{
 		content:"-";
 	}
+	#projectbtn{
+		background-color: #25936D;
+	    color:#ffffff;
+		text-decoration: none;
+		padding:5px 20px;
+		border-radius: 5px;
+	    display: inline-block;
+	}
 
 /*Experience*/
 	.font1 {
@@ -110,7 +118,7 @@ BODY {
 	}
 	.float{
 		float:right;
-		color:#339966;
+		color:#25936D;
 		text-decoration: none;
 	}
 	.float img {
@@ -118,7 +126,7 @@ BODY {
 		padding-right: 5px;
 	}
 	.weblink {
-		color:#339966;
+		color:#25936D;
 		text-decoration: none;
 		}		
 	.weblink:hover {
