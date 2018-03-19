@@ -6,7 +6,7 @@ header, footer, section, nav, article{
 
 BODY {
 	font-family: 'Open Sans', sans-serif;
-	background-color: #ffffcc;
+	background-color: #ffffe6;
 	margin:0;
 	padding:0;
 	/* reset the default styles */
@@ -21,6 +21,14 @@ BODY {
 	}
 	.bg-white{
 		background-color: #ffffff;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+	.col-md-4, .col-md-8, .col-md-6 {
+		padding-left: 30px;
+		padding-right: 30px;
 	}
 
 /*back to top button*/
@@ -40,8 +48,8 @@ BODY {
 
 /* Header */
 	#header {
-		background-color: #ffffcc;
-		box-shadow: 0 5px 5px #d9d9d9;
+		background-color: #ffffe6;
+		box-shadow: 0 5px 5px rgb(217, 217, 217, 0.8);
 	}	
 	.headerli{
 		font-size: 16px; 
@@ -60,9 +68,10 @@ BODY {
 		padding: 100px 2% 30px 2%;
 	}
 
-	@media (min-width: 1200px)
-	.container{
-	    max-width: 960px;
+	@media (min-width: 1200px){
+		.container{
+		    max-width: 960px;
+		}
 	}
 
 /* Profile */
@@ -83,7 +92,10 @@ BODY {
 	
 	#profile img{
 		border-radius: 20%;
-		margin-left: 20%;
+		margin-left: 15%;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		
 	}
 	#profile h1{
 		margin-bottom: 50px;
@@ -143,6 +155,7 @@ BODY {
 		color:#ffffff;
 		width: 100%;
 		background-color:#434242;
+		margin-bottom: 20px;
 	}
 	img.left{
 		margin-right: 5%;
