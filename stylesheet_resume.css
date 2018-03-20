@@ -9,6 +9,7 @@ BODY {
 	background-color: #ffffe6;
 	margin:0;
 	padding:0;
+	line-height: 1.6;
 	/* reset the default styles */
 }
 
@@ -30,6 +31,10 @@ BODY {
 		padding-left: 30px;
 		padding-right: 30px;
 	}
+	li {
+		margin-bottom: 8px;
+	}
+
 
 /*back to top button*/
 	#myBtn {
@@ -110,6 +115,12 @@ BODY {
 	}
 	.listsymbol:before{
 		content:"-";
+	}
+	ul.no-bullets2 {
+	    list-style: none;
+	    margin-left: 0px;
+	    padding-left: 0em;
+	    text-indent: 0em;
 	}
 	#projectbtn{
 		background-color: #25936D;
